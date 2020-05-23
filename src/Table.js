@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const TableHeader = () => {
   return (
-    <thead>
+    <thead className='thead-dark'>
       <tr>
         <th>Name</th>
         <th>Job</th>
@@ -29,7 +29,7 @@ class Table extends Component {
     const characters = this.props.characterData
 
     return (
-      <table>
+      <table className='table table-hover'>
         <TableHeader />
         <TableBody characterData={characters} />
       </table>
