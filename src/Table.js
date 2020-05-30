@@ -28,18 +28,16 @@ const TableBody = (props) => {
   return <tbody>{rows}</tbody>
 }
 
-class Table extends Component {
-  render() {
-    const characters = this.props.characterData
-    const removeCharacter = this.props.removeCharacter
+function Table(props) {
+  const characters = props.characterData
+  const removeCharacter = props.removeCharacter
 
-    return (
-      <table className='table table-hover'>
-        <TableHeader />
-        <TableBody characterData={characters} removeCharacter={removeCharacter} />
-      </table>
-    )
-  }
+  return (
+    <table className='table table-hover'>
+      <TableHeader />
+      <TableBody characterData={characters} removeCharacter={removeCharacter} />
+    </table>
+  )
 }
 
 export default Table
